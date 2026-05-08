@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Achref Ferjani — Resume</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --border: rgba(255,255,255,0.08);
+    --text: #e8e8f0;
+    --muted: #888899;
+    --accent: #7f77dd;
+    --accent-dim: rgba(127,119,221,0.12);
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 3rem 1.5rem 5rem;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+
+  /* Header */
+  header { margin-bottom: 2.5rem; }
+  h1 { font-size: 2rem; font-weight: 600; letter-spacing: -0.5px; color: #fff; }
+  .role { font-size: 1rem; color: var(--accent); margin: 0.15rem 0 0.75rem; }
+  .meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; font-size: 13px; color: var(--muted); }
+  .meta a { color: var(--muted); text-decoration: none; }
+  .meta a:hover { color: var(--text); }
+
+  /* Nav/download */
+  .top-bar { display: flex; justify-content: flex-end; margin-bottom: 2rem; }
+  .btn {
+    font-size: 13px; padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .btn:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+
+  /* Section */
+  section { margin-bottom: 2.5rem; }
+  h2 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* Summary */
+  .summary { color: var(--text); font-size: 14.5px; }
+
+  /* Experience */
+  .entry { margin-bottom: 1.6rem; }
+  .entry-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; }
+  .entry-title { font-weight: 600; font-size: 15px; color: #fff; }
+  .entry-period { font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .entry-sub { font-size: 13px; color: var(--accent); margin-bottom: 0.3rem; }
+  .entry-body { font-size: 14px; color: var(--muted); }
+
+  /* Skills chips */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    font-size: 12.5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    border: 1px solid rgba(127,119,221,0.25);
+  }
+
+  /* Hobbies */
+  .hobbies { font-size: 14px; color: var(--muted); }
+
+  /* Languages table */
+  .langs { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+  .lang-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .lang-name { font-size: 14px; font-weight: 500; color: var(--text); }
+  .lang-level { font-size: 12px; color: var(--muted); }
+
+  /* Print */
+  @media print {
+    body { background: #fff; color: #111; padding: 2rem; }
+    :root { --bg:#fff; --surface:#f5f5f5; --border:#ddd; --text:#111; --muted:#555; --accent:#5340b0; --accent-dim:#eeecfd; }
+    .btn { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="top-bar">
+    <a class="btn" href="javascript:window.print()">↓ Download PDF</a>
+  </div>
+
+  <header>
+    <h1>Achref Ferjani</h1>
+    <p class="role">Network Systems Engineering Student · Cybersecurity Enthusiast</p>
+    <div class="meta">
+      <span>Tunis, Manouba</span>
+      <span>+216 25 708 778</span>
+      <a href="mailto:cy1ingachref@gmail.com">cy1ingachref@gmail.com</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">
+      Motivated 2nd-year Network Systems Engineering student with hands-on experience in network design, traffic analysis, and server administration. Skilled in configuring VLANs, DHCP servers, and multi-network topologies using Cisco Packet Tracer and Windows Server. Actively sharpening cybersecurity skills through CTF challenges, pwnable exercises, and platforms like TryHackMe. Passionate about network security and eager to contribute to a real-world cybersecurity team.
+    </p>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Bachelor in Computer Systems Engineering</span>
+        <span class="entry-period">2023 – Present</span>
+      </div>
+      <div class="entry-sub">ISSATM — Bizerte</div>
+      <div class="entry-body">
+        Focus on Cybersecurity and Data/Computer Network Engineering. Relevant coursework: Network Security, Computer Networks, Data Communications, Operating Systems, Data Structures &amp; Algorithms. Lab work includes packet analysis and basic network hardening.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="chips">
+      <span class="chip">Wireshark / Packet Analysis</span>
+      <span class="chip">TCP/IP · VLANs · DHCP</span>
+      <span class="chip">Cisco Packet Tracer</span>
+      <span class="chip">Python</span>
+      <span class="chip">C / C++</span>
+      <span class="chip">Java / JavaScript</span>
+      <span class="chip">SQL / PL-SQL</span>
+      <span class="chip">Linux / CLI</span>
+      <span class="chip">Arduino / ESP32</span>
+      <span class="chip">Git</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Soft Skills</h2>
+    <div class="chips">
+      <span class="chip" style="background:rgba(29,158,117,0.1);color:#1d9e75;border-color:rgba(29,158,117,0.25);">Problem-solving</span>
+      <span class="chip" style="background:rgba(29,158,117,0.1);color:#1d9e75;border-color:rgba(29,158,117,0.25);">Attention to detail</span>
+      <span class="chip" style="background:rgba(29,158,117,0.1);color:#1d9e75;border-color:rgba(29,158,117,0.25);">Fast learner</span>
+      <span class="chip" style="background:rgba(29,158,117,0.1);color:#1d9e75;border-color:rgba(29,158,117,0.25);">Self-directed</span>
+      <span class="chip" style="background:rgba(29,158,117,0.1);color:#1d9e75;border-color:rgba(29,158,117,0.25);">Analytical thinking</span>
+      <span class="chip" style="background:rgba(29,158,117,0.1);color:#1d9e75;border-color:rgba(29,158,117,0.25);">Teamwork &amp; communication</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Hobbies &amp; Interests</h2>
+    <p class="hobbies">
+      Chess · Reading · CTF competitions &amp; pwnable challenges · Network home-lab experimentation · Cybersecurity research · Hardware &amp; technology exploration
+    </p>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <div class="langs">
+      <div class="lang-card"><div class="lang-name">Arabic</div><div class="lang-level">Native</div></div>
+      <div class="lang-card"><div class="lang-name">English</div><div class="lang-level">C1 — Advanced</div></div>
+      <div class="lang-card"><div class="lang-name">French</div><div class="lang-level">B2 — Upper Intermediate</div></div>
+      <div class="lang-card"><div class="lang-name">German</div><div class="lang-level">A2 — Elementary</div></div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
