@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+
+/* ---- Design tokens (become Tailwind utilities, e.g. text-ink, bg-panel) ---- */
+@theme {
+	--color-bg: #0a0a0f;
+	--color-panel: #121219;
+	--color-line: #1e1e2a;
+	--color-ink: #c3c8d4;
+	--color-faint: #8a90a0;
+	--color-accent: #8a9bff;
+
+	--font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+	--font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+		background-color: var(--color-bg);
+	}
+
+	body {
+		background-color: transparent;
+		color: var(--color-ink);
+		font-family: var(--font-sans);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	::selection {
+		background-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+}
