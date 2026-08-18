@@ -164,13 +164,13 @@ export const projects: Project[] = [
 	{
 		name: 'SNAP Coffee Shop',
 		description: 'A polished café site for a Tunis coffee shop — dark, animated, and deployed to GitHub Pages with QR-based distribution.',
-		url: 'https://cy1ingachref.github.io/SNAP-Coffee-Shop-live/',
+		url: 'https://github.com/cy1ingachref/SNAP-Coffee-Shop',
 		tags: ['SvelteKit', 'TypeScript', 'Tailwind']
 	},
 	{
 		name: '5bccrypt',
 		description: 'A bcrypt 5-digit cracker — brute-forces numeric passwords (00000–99999) against bcrypt hashes to recover weak credentials.',
-		url: 'https://cy1ingachref.github.io/bcrypt-5digit-cracker/',
+		url: 'https://github.com/cy1ingachref/5bccrypt',
 		tags: ['Python', 'bcrypt', 'Security']
 	}
 ];
