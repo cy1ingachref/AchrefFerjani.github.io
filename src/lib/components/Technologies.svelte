@@ -5,17 +5,15 @@
 </script>
 
 <Section id="technologies" title="Technologies">
-	<ul class="flex flex-wrap gap-3" role="list">
+	<ul class="flex flex-wrap items-center gap-x-5 gap-y-3" role="list">
 		{#each technologies as tech (tech.label)}
-			<li
-				class="flex items-center gap-2 rounded-full border border-line bg-panel px-3.5 py-2 text-sm text-ink transition-colors hover:border-accent/50"
-			>
+			<li class="flex items-center gap-2 text-sm text-ink">
 				<img
-					src={iconUrl(tech.icon, tech.color)}
+					src={iconUrl(tech.icon, tech.color || '#a1a1aa')}
 					alt=""
 					aria-hidden="true"
-					width="16"
-					height="16"
+					width="18"
+					height="18"
 					loading="lazy"
 					decoding="async"
 				/>

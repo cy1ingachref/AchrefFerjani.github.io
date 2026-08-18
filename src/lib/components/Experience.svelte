@@ -4,16 +4,13 @@
 </script>
 
 <Section id="experience" title="Experience">
-	<ol class="relative border-l border-line pl-6 sm:pl-8">
+	<div class="space-y-8">
 		{#each experience as job (job.role + job.company)}
-			<li class="relative pb-10 last:pb-0">
-				<span
-					class="absolute -left-[1.5px] top-1.5 h-2.5 w-2.5 -translate-x-1/2 rounded-full border border-accent bg-bg"
-					aria-hidden="true"
-				></span>
-
-				<div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-					<h3 class="text-lg font-semibold text-ink">{job.role}</h3>
+			<div>
+				<div
+					class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between"
+				>
+					<h3 class="text-base font-semibold text-ink">{job.role}</h3>
 					<span class="font-mono text-xs text-faint">{job.start} – {job.end}</span>
 				</div>
 				<p class="mt-1 text-sm text-accent">
@@ -28,7 +25,7 @@
 						</li>
 					{/each}
 				</ul>
-			</li>
+			</div>
 		{/each}
-	</ol>
+	</div>
 </Section>
