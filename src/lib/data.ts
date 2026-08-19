@@ -97,6 +97,27 @@ export const education: Education[] = [
 	}
 ];
 
+/* ----------------------------------------------------------------------------
+ * 3b. CERTIFICATIONS  (badges, courses, platforms)
+ * ------------------------------------------------------------------------- */
+
+export interface Certification {
+	/** Name of the cert / course / achievement. */
+	name: string;
+	/** Issuing body or platform, e.g. 'TryHackMe', 'Cisco'. */
+	issuer: string;
+	/** Optional date or status, e.g. '2026' or 'In progress'. */
+	date?: string;
+	/** Optional URL to verify / view. */
+	url?: string;
+}
+
+export const certifications: Certification[] = [
+	{ name: 'TryHackMe — Pre-Security', issuer: 'TryHackMe', date: '2026' },
+	{ name: 'TryHackMe — Introduction to Cyber Security', issuer: 'TryHackMe', date: '2026' },
+	{ name: 'CTF & pwnable practice', issuer: 'Self-directed', date: 'Ongoing' }
+];
+
 export const languages: string[] = [
 	'Arabic (Native)',
 	'English (C1)',

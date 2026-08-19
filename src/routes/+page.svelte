@@ -3,6 +3,7 @@
 	import Header from '$lib/components/Header.svelte';
 	import Technologies from '$lib/components/Technologies.svelte';
 	import Education from '$lib/components/Education.svelte';
+	import Certifications from '$lib/components/Certifications.svelte';
 	import Experience from '$lib/components/Experience.svelte';
 	import Projects from '$lib/components/Projects.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -17,6 +18,7 @@
 	<Header />
 	<Technologies />
 	<Education />
+	<Certifications />
 	<Experience />
 	<Projects />
 	<Footer />
