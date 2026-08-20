@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import { site } from '$lib/data';
-	import { THEME_COLOR, DEPLOY_VERSION } from '$lib/constants';
+	import { THEME_COLOR } from '$lib/constants';
 	import { page } from '$app/stores';
 	import { BASE_URL } from '$lib/constants-base';
 	import Particles from '$lib/components/Particles.svelte';
@@ -38,8 +38,6 @@
 	{#if site.twitterHandle}
 		<meta name="twitter:creator" content={site.twitterHandle} />
 	{/if}
-
-	<meta name="deployment-version" content={DEPLOY_VERSION} />
 </svelte:head>
 
 <Particles />
