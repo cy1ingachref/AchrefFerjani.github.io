@@ -19,12 +19,9 @@
 @layer base {
 	html {
 		scroll-behavior: smooth;
-		background-color: var(--color-bg);
-	}
-
-	body {
-		/* Radial-gradient atmosphere mirrored from rezk2ll.github.io, sitting
-		   behind the particle canvas. */
+		/* Atmospheric radial gradients moved to <html> so they sit BEHIND the
+		   particle canvas (which is fixed at z-index:-1 and would otherwise be
+		   hidden by an opaque <body> paint). */
 		background-color: var(--color-bg);
 		background-image:
 			radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.5) 100%),
@@ -32,6 +29,11 @@
 			radial-gradient(ellipse 60% 50% at 20% 0%, rgba(60, 70, 100, 0.1), transparent),
 			radial-gradient(ellipse 50% 40% at 80% 100%, rgba(50, 40, 70, 0.08), transparent);
 		background-attachment: fixed;
+	}
+
+	body {
+		/* Transparent so the flying-particle canvas (z-index:-1) shows through. */
+		background-color: transparent;
 		color: var(--color-ink);
 		font-family: var(--font-sans);
 		-webkit-font-smoothing: antialiased;

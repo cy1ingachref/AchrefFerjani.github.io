@@ -83,46 +83,33 @@
 				? 'animate-fade-in'
 				: 'opacity-0'}"
 		>
-			<!-- Banner + identity wrapper -->
-			<div class="relative mb-6">
-				<div class="h-[240px] overflow-hidden rounded-2xl border border-line bg-[#14141f]">
-					<!-- Subtle grid banner (stand-in for the reference map.webp) -->
-					<div
-						class="absolute inset-0"
-						style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(ellipse at center, black 35%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse at center, black 35%, transparent 75%);"
-					></div>
-					<div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent"></div>
-
-					{#if time}
-						<div
-							class="absolute top-3 left-3 flex items-center gap-1.5 rounded-full bg-zinc-900/70 px-2.5 py-1 text-xs text-zinc-300 backdrop-blur-sm"
-						>
-							<span>{timeIcon}</span>
-							<span>{time}</span>
-						</div>
-					{/if}
-
-					<div class="absolute -translate-x-1/2 -translate-y-1/2 animate-pulse-dot h-2.5 w-2.5 rounded-full bg-accent" style="left: 43%; top: 51%;"></div>
-				</div>
-
-				<!-- Identity — overlaps banner bottom -->
-				<div class="absolute -bottom-12 left-4 flex items-end gap-4">
-					<img
-						src={`${base}${profile.avatar}`}
-						width="96"
-						height="96"
-						alt={profile.name}
-						class="h-24 w-24 rounded-2xl border-4 border-[#0a0a0f] object-cover shadow-lg shadow-black/40"
-					/>
-					<div class="pb-1">
-						<h1 class="text-xl font-bold tracking-tight text-white">{profile.name}</h1>
-						<p class="text-sm text-faint">{profile.title}</p>
-					</div>
+			<!-- Identity block (no banner / map) -->
+			<div class="mb-6 flex flex-col items-start gap-4">
+				<img
+					src={`${base}${profile.avatar}`}
+					width="96"
+					height="96"
+					alt={profile.name}
+					class="h-24 w-24 rounded-2xl border-4 border-[#0a0a0f] object-cover shadow-lg shadow-black/40"
+				/>
+				<div>
+					<h1 class="text-xl font-bold tracking-tight text-white">{profile.name}</h1>
+					<p class="text-sm text-faint">{profile.title}</p>
 				</div>
 			</div>
 
+			<!-- Live clock with pulsing dot -->
+			{#if time}
+				<div
+					class="mb-6 flex items-center gap-2 rounded-full border border-line bg-panel/40 px-3 py-1.5 text-xs text-zinc-300"
+				>
+					<span class="animate-pulse-dot h-2.5 w-2.5 rounded-full bg-accent"></span>
+					<span>{timeIcon} {time}</span>
+				</div>
+			{/if}
+
 			<!-- Bio -->
-			<p class="mt-16 text-sm leading-relaxed text-faint">
+			<p class="mt-8 text-sm leading-relaxed text-faint">
 				{profile.bio}
 			</p>
 
