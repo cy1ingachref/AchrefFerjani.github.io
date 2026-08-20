@@ -27,6 +27,8 @@ export const profile = {
 	name: 'Achref Ferjani',
 	/** One-line current title shown under your name. */
 	title: 'Network Systems Engineering Student · Cybersecurity Enthusiast',
+	/** Short one-line role/context subtitle shown directly under the name. */
+	subtitle: 'B.Sc. Student — ISSATM Bizerte',
 	/** 1–2 sentence bio describing what you do / focus on. */
 	bio: 'Network systems engineering student with hands-on experience in network design, traffic analysis, and server administration. Skilled in configuring VLANs, DHCP servers, and multi-network topologies using Cisco Packet Tracer and Windows Server. Actively sharpening cybersecurity skills through CTF challenges, pwnable exercises, and platforms like TryHackMe. Passionate about network security and eager to contribute to a real-world cybersecurity team.',
 	/** Circular avatar. Square image at static/avatar.jpg (or use a URL). */
@@ -55,18 +57,18 @@ export interface Tech {
 }
 
 export const technologies: Tech[] = [
-	{ label: 'Wireshark', icon: 'wireshark' },
-	{ label: 'Cisco / Packet Tracer', icon: 'cisco' },
-	{ label: 'Python', icon: 'python' },
-	{ label: 'C / C++', icon: 'cplusplus' },
-	{ label: 'Java', icon: 'iconify:devicon:java' },
-	{ label: 'JavaScript', icon: 'javascript' },
-	{ label: 'SQL / PL-SQL', icon: 'postgresql' },
-	{ label: 'Linux', icon: 'linux' },
-	{ label: 'Arduino / ESP32', icon: 'arduino' },
-	{ label: 'Git', icon: 'git' },
-	{ label: 'Bash', icon: 'iconify:simple-icons:gnubash' },
-	{ label: 'Windows Server', icon: 'iconify:mdi:microsoft-windows' }
+	{ label: 'Wireshark', icon: 'wireshark', color: '#1679a3' },
+	{ label: 'Cisco / Packet Tracer', icon: 'cisco', color: '#1ba0c9' },
+	{ label: 'Python', icon: 'python', color: '#3776ab' },
+	{ label: 'C / C++', icon: 'cplusplus', color: '#00599c' },
+	{ label: 'Java', icon: 'iconify:devicon:java', color: '#ea2d2e' },
+	{ label: 'JavaScript', icon: 'javascript', color: '#f7df1e' },
+	{ label: 'SQL / PL-SQL', icon: 'postgresql', color: '#336791' },
+	{ label: 'Linux', icon: 'linux', color: '#000000' },
+	{ label: 'Arduino / ESP32', icon: 'arduino', color: '#00979d' },
+	{ label: 'Git', icon: 'git', color: '#f05032' },
+	{ label: 'Bash', icon: 'iconify:simple-icons:gnubash', color: '#4eaa25' },
+	{ label: 'Windows Server', icon: 'iconify:mdi:microsoft-windows', color: '#0078d4' }
 ];
 
 /* ----------------------------------------------------------------------------

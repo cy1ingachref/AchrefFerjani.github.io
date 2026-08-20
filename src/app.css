@@ -5,11 +5,11 @@
  * blue accent, Inter typography, flat surfaces with hairline borders.
  */
 @theme {
-	--color-bg: #111113;
-	--color-panel: #18181b;
-	--color-line: #27272a;
-	--color-ink: #e4e4e7;
-	--color-faint: #a1a1aa;
+	--color-bg: #0a0a0f;
+	--color-panel: #14141a;
+	--color-line: #24242a;
+	--color-ink: #ededf2;
+	--color-faint: #9b9baa;
 	--color-accent: #60a5fa;
 
 	--font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;

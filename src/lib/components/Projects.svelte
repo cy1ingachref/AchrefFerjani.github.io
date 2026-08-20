@@ -3,7 +3,7 @@
 	import Section from './Section.svelte';
 </script>
 
-<Section id="projects" title="Open Source / Projects">
+<Section id="projects" title="Open Source / Projects" divider>
 	<ul class="grid grid-cols-1 gap-4 sm:grid-cols-2" role="list">
 		{#each projects as project (project.name)}
 			<li>

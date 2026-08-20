@@ -15,7 +15,7 @@
 </script>
 
 <!-- Ghost outline icons, matching the reference site's minimal style. -->
-<ul class="flex items-center gap-3" role="list">
+<ul class="flex items-center gap-2.5" role="list">
 	{#each items as item (item.key)}
 		<li>
 			<a

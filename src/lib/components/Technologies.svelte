@@ -5,19 +5,24 @@
 </script>
 
 <Section id="technologies" title="Technologies">
-	<ul class="flex flex-wrap items-center gap-x-5 gap-y-3" role="list">
+	<ul class="flex flex-wrap gap-2" role="list">
 		{#each technologies as tech (tech.label)}
-			<li class="flex items-center gap-2 text-sm text-ink">
-				<img
-					src={iconUrl(tech.icon, tech.color || '#a1a1aa')}
-					alt=""
-					aria-hidden="true"
-					width="18"
-					height="18"
-					loading="lazy"
-					decoding="async"
-				/>
-				<span>{tech.label}</span>
+			<li>
+				<span
+					class="inline-flex items-center gap-1.5 rounded-full border border-line bg-panel px-3 py-1 text-sm text-ink"
+				>
+					<img
+						src={iconUrl(tech.icon, tech.color)}
+						alt=""
+						aria-hidden="true"
+						width="18"
+						height="18"
+						loading="lazy"
+						decoding="async"
+						class="shrink-0"
+					/>
+					{tech.label}
+				</span>
 			</li>
 		{/each}
 	</ul>

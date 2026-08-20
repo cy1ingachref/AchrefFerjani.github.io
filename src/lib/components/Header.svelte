@@ -4,7 +4,7 @@
 	import ContactIcons from './ContactIcons.svelte';
 </script>
 
-<header class="mx-auto w-full max-w-4xl px-6 pt-20 pb-10 sm:px-8 sm:pt-28 sm:pb-14">
+<header class="mx-auto w-full max-w-4xl px-6 pt-20 pb-8 sm:px-8 sm:pt-28 sm:pb-10">
 	<div class="flex flex-col items-center text-center">
 		<div class="relative">
 			<img
@@ -22,9 +22,13 @@
 
 		<p class="mt-2 font-mono text-sm text-accent sm:text-base">{profile.title}</p>
 
+		{#if profile.subtitle}
+			<p class="mt-1 text-sm text-faint">{profile.subtitle}</p>
+		{/if}
+
 		<p class="mt-5 max-w-xl text-base leading-relaxed text-faint">{profile.bio}</p>
 
-		<div class="mt-7 flex items-center gap-4">
+		<div class="mt-7 flex items-center gap-3">
 			<ContactIcons />
 			{#if profile.links.resume}
 				<a

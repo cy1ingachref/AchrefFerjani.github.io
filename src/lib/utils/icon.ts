@@ -12,11 +12,12 @@ import { ACCENT } from '$lib/constants';
  *   'iconify:devicon:java'           -> api.iconify.design/devicon:java
  *   'iconify:mdi:phone'              -> api.iconify.design/mdi:phone
  */
-export function iconUrl(icon: string, color: string = ACCENT): string {
-	const hex = color.replace('#', '');
+export function iconUrl(icon: string, color?: string): string {
 	if (icon.startsWith('iconify:')) {
 		const name = icon.slice('iconify:'.length);
-		return `https://api.iconify.design/${name}.svg?color=%23${hex}`;
+		const q = color ? `?color=%23${color.replace('#', '')}` : '';
+		return `https://api.iconify.design/${name}.svg${q}`;
 	}
-	return `https://cdn.simpleicons.org/${icon}/${hex}`;
+	const q = color ? `/${color.replace('#', '')}` : '';
+	return `https://cdn.simpleicons.org/${icon}${q}`;
 }
