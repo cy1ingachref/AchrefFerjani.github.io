@@ -23,11 +23,78 @@
 	}
 
 	body {
-		background-color: transparent;
+		/* Radial-gradient atmosphere mirrored from rezk2ll.github.io, sitting
+		   behind the particle canvas. */
+		background-color: var(--color-bg);
+		background-image:
+			radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.5) 100%),
+			radial-gradient(ellipse 80% 70% at 50% 30%, rgba(40, 50, 80, 0.15), transparent),
+			radial-gradient(ellipse 60% 50% at 20% 0%, rgba(60, 70, 100, 0.1), transparent),
+			radial-gradient(ellipse 50% 40% at 80% 100%, rgba(50, 40, 70, 0.08), transparent);
+		background-attachment: fixed;
 		color: var(--color-ink);
 		font-family: var(--font-sans);
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+	}
+
+	/* Subtle grain overlay (mirrors rezk2ll.github.io /noise.png treatment). */
+	.grain-overlay {
+		position: fixed;
+		inset: 0;
+		z-index: 20;
+		pointer-events: none;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+		background-repeat: repeat;
+		opacity: 0.035;
+		mix-blend-mode: screen;
+	}
+
+	/* Section scroll-reveal (mirrors rezk2ll.github.io). */
+	.section-hidden {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.section-visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	/* Location dot pulse (mirrors rezk2ll.github.io). */
+	@keyframes pulse-dot {
+		0%,
+		100% {
+			box-shadow:
+				0 0 0 4px rgba(96, 165, 250, 0.15),
+				0 0 12px rgba(96, 165, 250, 0.4);
+		}
+		50% {
+			box-shadow:
+				0 0 0 8px rgba(96, 165, 250, 0.06),
+				0 0 20px rgba(96, 165, 250, 0.2);
+		}
+	}
+
+	.animate-pulse-dot {
+		animation: pulse-dot 3s ease-in-out infinite;
+	}
+
+	/* Fade in up (sidebar entrance). */
+	@keyframes fade-in-up {
+		from {
+			opacity: 0;
+			transform: translateY(16px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.animate-fade-in {
+		animation: fade-in-up 0.7s ease-out both;
 	}
 
 	::selection {
