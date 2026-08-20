@@ -185,28 +185,28 @@ export interface Project {
 
 export const projects: Project[] = [
 	{
-		name: '5bccrypt',
-		description: 'A bcrypt 5-digit cracker — brute-forces numeric passwords (00000–99999) against bcrypt hashes to recover weak credentials and demonstrate real hash-cracking.',
-		url: 'https://cy1ingachref.github.io/bcrypt-5digit-cracker/',
+		name: 'bcrypt-5digit-cracker',
+		description: 'Educational bcrypt cracker — brute-forces a 5-digit numeric PIN against a bcrypt hash, with an in-browser cracker and a Python CLI.',
+		url: 'https://github.com/cy1ingachref/bcrypt-5digit-cracker',
 		tags: ['Python', 'bcrypt', 'Security']
 	},
 	{
-		name: 'Cybersecurity Learning Path (TryHackMe)',
-		description: 'Completed Pre-Security and Introduction to Cyber Security paths, plus ongoing CTF and pwnable practice — building hands-on offensive/defensive fundamentals.',
-		url: 'https://tryhackme.com',
-		tags: ['TryHackMe', 'CTF', 'pwnable']
+		name: '01-devsecops-pipeline',
+		description: 'DevSecOps CI/CD security pipeline as code — GitHub Actions + Semgrep + gitleaks + Trivy + tfsec, with a cross-project JWT gate.',
+		url: 'https://github.com/cy1ingachref/01-devsecops-pipeline',
+		tags: ['DevSecOps', 'CI/CD', 'AppSec']
 	},
 	{
-		name: 'Cisco Network Design Lab',
-		description: 'Multi-network topology built in Cisco Packet Tracer: VLAN segmentation, DHCP server configuration, and inter-VLAN routing for a simulated enterprise network.',
-		url: 'https://github.com/cy1ingachref',
-		tags: ['Cisco Packet Tracer', 'VLAN', 'DHCP']
+		name: '03-cloud-soc-detection-lab',
+		description: 'Cloud SOC detection lab — builds alerting and detection rules plus a simulated attack-to-alert pipeline.',
+		url: 'https://github.com/cy1ingachref/03-cloud-soc-detection-lab',
+		tags: ['SOC', 'Detection', 'Cloud']
 	},
 	{
-		name: 'SNAP Coffee Shop',
-		description: 'A polished café site for a Tunis coffee shop — dark, animated, and deployed to GitHub Pages with QR-based distribution.',
-		url: 'https://cy1ingachref.github.io/SNAP-Coffee-Shop-live/',
-		tags: ['SvelteKit', 'TypeScript', 'Tailwind']
+		name: '02-jwt-audit-tool',
+		description: 'Static audit tool for JWT implementations — flags weak signing secrets, algorithm confusion, and insecure token handling.',
+		url: 'https://github.com/cy1ingachref/02-jwt-audit-tool',
+		tags: ['JWT', 'AppSec', 'Python']
 	}
 ];
 
