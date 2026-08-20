@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { base } from '$app/paths';
 	import {
 		profile,
 		technologies,
@@ -107,7 +108,7 @@
 				<!-- Identity — overlaps banner bottom -->
 				<div class="absolute -bottom-12 left-4 flex items-end gap-4">
 					<img
-						src={profile.avatar}
+						src={`${base}${profile.avatar}`}
 						width="96"
 						height="96"
 						alt={profile.name}
@@ -172,7 +173,7 @@
 			<!-- Resume link -->
 			{#if profile.links.resume}
 				<a
-					href={profile.links.resume}
+					href={`${base}${profile.links.resume}`}
 					class="mt-5 inline-flex items-center gap-2 rounded-lg border border-line bg-panel/40 px-4 py-2 text-sm text-faint transition-colors hover:border-zinc-700 hover:text-white"
 				>
 					<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
