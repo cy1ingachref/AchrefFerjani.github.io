@@ -203,6 +203,12 @@ export const projects: Project[] = [
 		tags: ['SOC', 'Detection', 'Cloud']
 	},
 	{
+		name: 'sigma-lab',
+		description: 'Dependency-free Sigma detection lab — 4 rules (PsExec, PowerShell, DNS tunneling, LSASS) proven by a green-check harness: fires on planted attacks, silent on baseline.',
+		url: 'https://github.com/cy1ingachref/sigma-lab',
+		tags: ['Sigma', 'Detection', 'Python']
+	},
+	{
 		name: '02-jwt-audit-tool',
 		description: 'Static audit tool for JWT implementations — flags weak signing secrets, algorithm confusion, and insecure token handling.',
 		url: 'https://github.com/cy1ingachref/02-jwt-audit-tool',
