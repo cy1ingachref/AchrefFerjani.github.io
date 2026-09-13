@@ -185,10 +185,10 @@ export interface Project {
 
 export const projects: Project[] = [
 	{
-		name: 'bcrypt-5digit-cracker',
-		description: 'Educational bcrypt cracker — brute-forces a 5-digit numeric PIN against a bcrypt hash, with an in-browser cracker and a Python CLI.',
-		url: 'https://github.com/cy1ingachref/bcrypt-5digit-cracker',
-		tags: ['Python', 'bcrypt', 'Security']
+		name: 'sigma-lab',
+		description: 'Dependency-free Sigma detection lab — 4 rules (PsExec, PowerShell, DNS tunneling, LSASS) proven by a green-check harness: fires on planted attacks, silent on baseline.',
+		url: 'https://github.com/cy1ingachref/sigma-lab',
+		tags: ['Sigma', 'Detection', 'Python']
 	},
 	{
 		name: '01-devsecops-pipeline',
@@ -197,22 +197,16 @@ export const projects: Project[] = [
 		tags: ['DevSecOps', 'CI/CD', 'AppSec']
 	},
 	{
-		name: '03-cloud-soc-detection-lab',
-		description: 'Cloud SOC detection lab — builds alerting and detection rules plus a simulated attack-to-alert pipeline.',
-		url: 'https://github.com/cy1ingachref/03-cloud-soc-detection-lab',
-		tags: ['SOC', 'Detection', 'Cloud']
-	},
-	{
-		name: 'sigma-lab',
-		description: 'Dependency-free Sigma detection lab — 4 rules (PsExec, PowerShell, DNS tunneling, LSASS) proven by a green-check harness: fires on planted attacks, silent on baseline.',
-		url: 'https://github.com/cy1ingachref/sigma-lab',
-		tags: ['Sigma', 'Detection', 'Python']
-	},
-	{
 		name: '02-jwt-audit-tool',
 		description: 'Static audit tool for JWT implementations — flags weak signing secrets, algorithm confusion, and insecure token handling.',
 		url: 'https://github.com/cy1ingachref/02-jwt-audit-tool',
 		tags: ['JWT', 'AppSec', 'Python']
+	},
+	{
+		name: 'bcrypt-5digit-cracker',
+		description: 'Educational bcrypt cracker — brute-forces a 5-digit numeric PIN against a bcrypt hash, with an in-browser cracker and a Python CLI.',
+		url: 'https://github.com/cy1ingachref/bcrypt-5digit-cracker',
+		tags: ['Python', 'bcrypt', 'Security']
 	}
 ];
 
