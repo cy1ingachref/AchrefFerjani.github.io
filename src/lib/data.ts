@@ -161,9 +161,9 @@ export const experience: Experience[] = [
 		start: '2024',
 		end: 'Present',
 		description: [
-			'Design and build polished, mobile-first marketing sites for Tunisian cafés and restaurants using SvelteKit and static hosting.',
-			'Deliver projects end-to-end: design, deploy to GitHub Pages, and QR-based distribution — no technical setup required from clients.',
-			'Balance client web work with studies in network systems engineering and a growing interest in cybersecurity.'
+			'Built simple, mobile-friendly websites for local cafés and small businesses using basic HTML, CSS, and a bit of SvelteKit.',
+			'Handled small projects from start to finish — design, deploy to GitHub Pages, and share via QR code so clients don\'t need to set anything up.',
+			'Still learning — balancing client work with university studies and a growing interest in cybersecurity and networking.'
 		]
 	}
 ];
